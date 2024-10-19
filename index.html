@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Personal Notes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>📚 My Personal Journal</h1>
+  </header>
+
+  <nav>
+    <button onclick="showSection('notes')">Notes</button>
+    <button onclick="showSection('quotes')">Quotes</button>
+    <button onclick="showSection('books')">Books</button>
+    <button onclick="showSection('todo')">To-Do List</button>
+  </nav>
+
+  <section id="notes" class="content">
+    <h2>Notes</h2>
+    <textarea placeholder="Write your notes here..."></textarea>
+  </section>
+
+  <section id="quotes" class="content hidden">
+    <h2>Quotes</h2>
+    <textarea placeholder="Add your favorite quotes here..."></textarea>
+  </section>
+
+  <section id="books" class="content hidden">
+    <h2>Books List</h2>
+    <textarea placeholder="Keep track of books to read..."></textarea>
+  </section>
+
+  <section id="todo" class="content hidden">
+    <h2>To-Do List</h2>
+    <ul id="todo-list"></ul>
+    <input type="text" id="new-task" placeholder="New task..." />
+    <button onclick="addTask()">Add Task</button>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
